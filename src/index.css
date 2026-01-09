@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+:root {
+  --color-background: #0f0f0f;
+  --color-foreground: #fafafa;
+  --color-surface: #1a1a1a;
+  --color-surface-hover: #252525;
+  --color-border: #2a2a2a;
+  --color-border-light: #3a3a3a;
+  --color-primary: #00d9ff;
+  --color-primary-dim: #00a3c4;
+  --color-secondary: #ff6b9d;
+  --color-accent: #ffd93d;
+  --color-success: #4ade80;
+  --color-warning: #fb923c;
+  --color-error: #f87171;
+  --color-text: #e5e5e5;
+  --color-text-muted: #9ca3af;
+  
+  font-family: 'JetBrains Mono', 'SF Mono', 'Fira Code', 'Consolas', monospace;
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--color-text);
+  background-color: var(--color-background);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-surface);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border-light);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-muted);
+}
+
+/* Monaco editor overrides */
+.monaco-editor {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Graph SVG styling */
+.graph-container {
+  display: inline-block;
+}
+
+.graph-container svg {
+  /* Allow SVG to take its natural size */
+  display: block;
+}
+
+.graph-container svg text {
+  font-family: "Helvetica", "Arial", sans-serif !important;
+}
+
+/* Tab styling enhancements */
+.tab-active {
+  border-bottom: 2px solid var(--color-primary);
+}
+
+/* Error panel styling */
+.error-panel {
+  background: linear-gradient(135deg, rgba(248, 113, 113, 0.1), rgba(248, 113, 113, 0.05));
+  border-left: 3px solid var(--color-error);
+}
+
+/* Success panel styling */
+.success-panel {
+  background: linear-gradient(135deg, rgba(74, 222, 128, 0.1), rgba(74, 222, 128, 0.05));
+  border-left: 3px solid var(--color-success);
+}
+
+/* Metrics styling */
+.metric-common {
+  color: var(--color-success);
+}
+
+.metric-partial {
+  color: var(--color-warning);
+}
+
+.metric-unique {
+  color: var(--color-error);
+}
